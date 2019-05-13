@@ -16,7 +16,6 @@ class TokenValidator extends LinValidator {
         ]
         
     }
-
     validateLoginType(values){
         if(!values.body.type) throw new Error('type是必须参数')
         if(!loginType.isInLoginType(values.body.type)) throw new Error('type参数不合法')
