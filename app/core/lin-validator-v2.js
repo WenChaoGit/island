@@ -5,9 +5,8 @@
  */
 
 const validator = require('validator')
-const {
-    ParameterException
-} = require('./base-exception')
+const {ParameterException} = require('../core/base-exception')
+
 const {
     get,
     last,

@@ -1,10 +1,11 @@
 const requireDirectory = require('require-directory')
 const Router = require('koa-router')
-
+const config = require('../config')
 class InitManager {
   static initCore(app){
     InitManager.app = app
     InitManager.initLoadRouters()
+    InitManager.initConfig()
   }
 
   static initLoadRouters(){
@@ -18,6 +19,10 @@ class InitManager {
         InitManager.app.use(obj.routes())
       }
     }
+  }
+
+  static initConfig(){
+    global.config = config
   }
    
 }
