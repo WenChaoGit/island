@@ -11,7 +11,7 @@ const renderException  = async (ctx,next) => {
                 request:`${ctx.method} ${ctx.path}`
             }
         }
-        ctx.status = error.code
+        // ctx.status = error.code
     }
 }
 
